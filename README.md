@@ -2,7 +2,7 @@
 ## DSA Capstone Project
 
 ##### --Create database
-### CREATE DATABASE KMS_SQLData
+### CREATE DATABASE KMS_SQLData [Download here](https://www.linkedin.com/in/terungwa-emmanuel-455a66245)
 
 ##### -- use database
 ### USE KMS_SQLData
