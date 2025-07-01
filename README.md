@@ -52,7 +52,8 @@
 ##### -- Question 3
 ##### -- total sales of appliances in Ontario
 ### SELECT
-### SUM([Sales]) AS TotalApplianceSales_Ontario
+### SUM([Sales]) AS 
+    TotalApplianceSales_Ontario
 ### FROM
     KMSSQLData
 ### WHERE
@@ -64,10 +65,13 @@
 ##### -- Bottom 10
 ### SELECT TOP 10
     [Customer_Name],
-### SUM([Sales]) AS TotalSales
+### SUM([Sales]) AS 
+	TotalSales
 ### FROM   KMSSQLData
-### GROUP BY    [Customer_Name]
-### ORDER BY     TotalSales ASC;
+### GROUP BY   
+	[Customer_Name]
+### ORDER BY     
+	TotalSales ASC;
 
 ##### -- Question 5
 ##### -- KMS incured the most shipping cost using which shipping method
@@ -87,75 +91,86 @@
 ##### -- most valuable customers, and what products or services do they typically purchase
 ##### -- top 10 most valuable customers
 ##### -- Top 10 Valuable Customers by Total Sales
-SELECT TOP 10
+#### SELECT TOP 10
     [Customer_Name],
     SUM(Sales) AS TotalSales,
     SUM(Profit) AS TotalProfit
-### FROM KMSSQLData
-### GROUP BY [Customer_Name]
-### ORDER BY TotalSales DESC;
+#### FROM 
+	KMSSQLData
+#### GROUP BY 
+	[Customer_Name]
+#### ORDER BY 
+	TotalSales DESC;
 
 ##### -- customers names, product and services.
-### SELECT TOP 10
+#### SELECT TOP 10
     [Customer_Name],
     [Product_Category],
-	[Product_Sub_Category],
-### SUM([Sales]) AS  TotalSales,
-### SUM([Profit]) AS  TotalProfit
-### FROM   KMSSQLData
-### WHERE
-    [Customer_Name] IN (
-### SELECT TOP 10   [Customer_Name]
-### FROM   KMSSQLData
-### GROUP BY    [Customer_Name]
-### ORDER BY  SUM([Sales]) DESC
+    [Product_Sub_Category],
+#### SUM([Sales]) AS  
+	TotalSales,
+#### SUM([Profit]) AS  
+	TotalProfit
+#### FROM   
+	KMSSQLData
+#### WHERE
+    	[Customer_Name] IN (
+#### SELECT TOP 10   
+	[Customer_Name]
+#### FROM   
+	KMSSQLData
+#### GROUP BY    
+	[Customer_Name]
+#### ORDER BY  SUM([Sales]) DESC
     )
-### GROUP BY
+#### GROUP BY
     [Customer_Name], [Product_Category], [Product_Sub_Category]
-### ORDER BY
+#### ORDER BY
     [Customer_Name], TotalSales DESC;
 
 ##### -- Question 7
 ##### -- small business customer that had the highest sales
-### SELECT TOP 1
+#### SELECT TOP 1
     [Customer_Name],
-### SUM([Sales]) AS TotalSales
-### FROM
-    KMSSQLData
-### WHERE
+#### SUM([Sales]) AS 
+	TotalSales
+#### FROM
+       KMSSQLData
+#### WHERE
     [Customer_Segment] = 'Small Business'
-### GROUP BY
+#### GROUP BY
     [Customer_Name]
-### ORDER BY
+#### ORDER BY
     TotalSales DESC;
 
 ##### -- Question 8
 ##### -- Corporate Customer that placed the most number of orders in 2009-2012
-### SELECT TOP 1
+#### SELECT TOP 1
     [Customer_Name],
     COUNT(DISTINCT [Order_ID]) AS TotalOrders
-### FROM
+#### FROM
     KMSSQLData
-### WHERE
+#### WHERE
     [Customer_Segment] = 'Corporate'
-### AND TRY_CAST([Order_Date] AS DATE) BETWEEN '2009-01-01' AND '2012-12-31'
-### GROUP BY
+#### AND TRY_CAST([Order_Date] AS DATE) 
+#### BETWEEN     '2009-01-01' AND '2012-12-31'
+#### GROUP BY
     [Customer_Name]
-### ORDER BY
+#### ORDER BY
     TotalOrders DESC;
 
 ##### -- Question 9
 ##### -- Consumer customer that was the most profitable 
-### SELECT TOP 1
+#### SELECT TOP 1
     [Customer_Name],
-### SUM([Profit]) AS TotalProfit
-### FROM
+#### SUM([Profit]) AS TotalProfit
+#### FROM
     KMSSQLData
-### WHERE
+#### WHERE
     [Customer_Segment] = 'Consumer'
-### GROUP BY
+#### GROUP BY
     [Customer_Name]
-### ORDER BY
+#### ORDER BY
     TotalProfit DESC;
 
 ##### -- Question 10
