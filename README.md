@@ -1,5 +1,5 @@
 # KULTRA-MEGA-STORE-(KMS)
-## DSA Capstone Project[Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/DSA_KMS%20Capstone-Project%20Report.pdf)
+## DSA Capstone Project [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/DSA_KMS%20Capstone-Project%20Report.pdf)
 
 ##### --Create database
 ### CREATE DATABASE KMS_SQLData [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/SQLqueryKMS_DSA_Project.sql)
