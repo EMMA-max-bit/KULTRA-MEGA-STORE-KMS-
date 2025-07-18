@@ -214,20 +214,32 @@ ORDER BY
     TotalSales DESC;
 
 ##### -- Question 8
+
 ##### -- Corporate Customer that placed the most number of orders in 2009-2012
-#### SELECT TOP 1
+
+SELECT TOP 1
     [Customer_Name],
-    COUNT(DISTINCT [Order_ID]) AS TotalOrders
-#### FROM
+    
+    COUNT(DISTINCT [Order_ID])
+    AS TotalOrders
+    
+FROM
     KMSSQLData
-#### WHERE
+    
+WHERE
     [Customer_Segment] = 'Corporate'
-#### AND TRY_CAST([Order_Date] AS DATE) 
-#### BETWEEN     '2009-01-01' AND '2012-12-31'
-#### GROUP BY
+    
+    AND TRY_CAST([Order_Date] AS DATE)
+
+BETWEEN     '2009-01-01'
+
+AND '2012-12-31'
+
+GROUP BY
     [Customer_Name]
-#### ORDER BY
-    TotalOrders DESC;
+    
+ORDER BY
+    TotalOrders DESC; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q8.gif)
 
 ##### -- Question 9
 ##### -- Consumer customer that was the most profitable 
