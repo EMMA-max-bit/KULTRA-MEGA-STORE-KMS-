@@ -112,18 +112,26 @@ ORDER BY
 ##### -- Question 5
 ##### -- KMS incured the most shipping cost using which shipping method
 ##### -- top shipping method
-### SELECT TOP 1
+
+SELECT TOP 1
     [Ship_Mode],
     SUM([Shipping_Cost]) AS TotalShippingCost
-### FROM
+    
+FROM
+    
     KMSSQLData
-### GROUP BY
+    
+GROUP BY
+    
     [Ship_Mode]
-### ORDER BY
-    TotalShippingCost DESC;
+    
+ORDER BY
+    TotalShippingCost DESC; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q5.gif)
 
 ##### -- CASE SCENARIO II
+
 ##### -- Question 6
+
 ##### -- most valuable customers, and what products or services do they typically purchase
 ##### -- top 10 most valuable customers
 ##### -- Top 10 Valuable Customers by Total Sales
