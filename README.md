@@ -242,18 +242,25 @@ ORDER BY
     TotalOrders DESC; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q8.gif)
 
 ##### -- Question 9
-##### -- Consumer customer that was the most profitable 
-#### SELECT TOP 1
+
+##### -- Consumer customer that was the most profitable
+
+SELECT TOP 1
     [Customer_Name],
-#### SUM([Profit]) AS TotalProfit
-#### FROM
+    
+SUM([Profit]) AS TotalProfit
+
+FROM
     KMSSQLData
-#### WHERE
+    
+WHERE
     [Customer_Segment] = 'Consumer'
-#### GROUP BY
+    
+GROUP BY
     [Customer_Name]
-#### ORDER BY
-    TotalProfit DESC;
+    
+ORDER BY
+    TotalProfit DESC; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q9.gif)
 
 ##### -- Question 10
 ##### -- customer returned items, and what segment do they belong
