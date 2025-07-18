@@ -30,7 +30,7 @@ GROUP BY
 
 ORDER BY
 
-TotalSales DESC;
+TotalSales DESC;[Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q1.gif)
 
 ##### -- Question 2
 ##### -- Top 3 and bottom 3 regions in terms of sales
