@@ -86,7 +86,7 @@ FROM
 WHERE
     [Product_Sub_Category] = 'Appliances'
     
-AND [Province] = 'Ontario'; [Download](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q3.gif)
+AND [Province] = 'Ontario'; [Download](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q3a.gif)
 
 ##### -- Question 4
 ##### -- Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
