@@ -51,7 +51,7 @@ GROUP BY
     
 ORDER BY
 
-    TotalSales DESC;
+    TotalSales DESC;  [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q2.gif)
 
 ##### -- Bottom 3 regions by sales
 SELECT TOP 3
