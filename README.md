@@ -86,15 +86,23 @@ AND [Province] = 'Ontario';
 ##### -- Question 4
 ##### -- Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
 ##### -- Bottom 10
+
 SELECT TOP 10
+
     [Customer_Name],
-SUM([Sales]) AS 
+    
+SUM([Sales]) AS
+
 	TotalSales
+ 
 FROM   KMSSQLData
+
 GROUP BY   
 	[Customer_Name]
+ 
 ORDER BY     
-	TotalSales ASC;
+	TotalSales ASC; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q4.gif)
+ 
 
 ##### -- Question 5
 ##### -- KMS incured the most shipping cost using which shipping method
