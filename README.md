@@ -74,14 +74,20 @@ ORDER BY
 
 ##### -- Question 3
 ##### -- total sales of appliances in Ontario
+
 SELECT
-SUM([Sales]) AS 
+
+SUM([Sales]) AS
+
     TotalApplianceSales_Ontario
+    
 FROM
     KMSSQLData
+    
 WHERE
     [Product_Sub_Category] = 'Appliances'
-AND [Province] = 'Ontario';
+    
+AND [Province] = 'Ontario'; [Download](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q3.gif)
 
 ##### -- Question 4
 ##### -- Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
