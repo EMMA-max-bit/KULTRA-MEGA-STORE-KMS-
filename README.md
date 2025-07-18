@@ -187,8 +187,8 @@ GROUP BY
     [Customer_Name], [Product_Category], [Product_Sub_Category]
     
 ORDER BY
-
-    [Customer_Name], TotalSales DESC; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q6.gif)
+    [Customer_Name], TotalSales DESC;
+    [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q6.gif)
 
 ##### -- Question 7
 ##### -- small business customer that had the highest sales
