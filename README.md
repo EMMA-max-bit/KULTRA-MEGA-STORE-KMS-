@@ -208,7 +208,7 @@ ORDER BY
 ### GROUP BY
     [Customer_Name], [Customer_Segment]
 ### HAVING SUM([Profit]) < 0
-### ORDER BY TotalProfit;
+### ORDER BY TotalProfit; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20Q10.pdf)
 
 ##### -- Question 11, Analysis of result
 ##### -- High/Critical Priority orders use faster methods, even if costly
