@@ -1,5 +1,3 @@
-## [Please Click this link to direct you to Palmoria DSA Capstone Project] [Click here](https://github.com/EMMA-max-bit/PALMORIA-HR-ANALYSIS-DSA-CAPSTONE-PROJECT-)
-
 # KULTRA-MEGA-STORE-(KMS)
 ## DSA Capstone Project [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/DSA_KMS%20Capstone-Project%20Report.pdf)
 
