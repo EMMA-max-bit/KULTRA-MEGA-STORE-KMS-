@@ -68,8 +68,7 @@ GROUP BY
     [Region]
     
 ORDER BY
-
-    TotalSales ASC;
+    TotalSales ASC; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q3.gif)
 
 ##### -- Question 3
 ##### -- total sales of appliances in Ontario
