@@ -5,72 +5,95 @@
 ### CREATE DATABASE KMS_SQLData [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/SQLqueryKMS_DSA_Project.sql)
 
 ##### -- use database
-### USE KMS_SQLData
+USE KMS_SQLData
 
 ##### -- Import table
 ##### -- KMSSQLData.csv
 
 ##### -- retrieve table
-### SELECT *
-#### FROM KMSSQLData
+SELECT *
+FROM KMSSQLData
 
 ### -- Question 1
 ##### -- top product category with the highest sales
-### SELECT TOP 1 [Product_Category],
-### SUM([Sales]) AS TotalSales
-### FROM
-#### KMSSQLData
-### GROUP BY
-#### [Product_Category]
-### ORDER BY
-#### TotalSales DESC;
+SELECT TOP 1 [Product_Category],
+
+SUM([Sales]) AS TotalSales
+
+FROM
+
+KMSSQLData
+
+GROUP BY
+
+[Product_Category]
+
+ORDER BY
+
+TotalSales DESC;
 
 ##### -- Question 2
 ##### -- Top 3 and bottom 3 regions in terms of sales
 ##### -- Top 3 regions by sales
-### SELECT TOP 3
-    [Region],
-### SUM([Sales]) AS TotalSales
-### FROM
-    KMSSQLData
-### GROUP BY
+SELECT TOP 3
+
+   [Region],
+   
+SUM([Sales]) AS TotalSales
+
+   FROM
+   
+KMSSQLData
+
+GROUP BY
+
     [Region]
-### ORDER BY
+    
+ORDER BY
+
     TotalSales DESC;
 
 ##### -- Bottom 3 regions by sales
-### SELECT TOP 3
+SELECT TOP 3
+
     [Region],
+    
     SUM([Sales]) AS TotalSales
-### FROM
+    
+FROM
+
     KMSSQLData
-### GROUP BY
+    
+GROUP BY
+
     [Region]
-### ORDER BY
+    
+ORDER BY
+
     TotalSales ASC;
 
 ##### -- Question 3
 ##### -- total sales of appliances in Ontario
-### SELECT
-### SUM([Sales]) AS 
+SELECT
+SUM([Sales]) AS 
     TotalApplianceSales_Ontario
-### FROM
+FROM
     KMSSQLData
-### WHERE
+WHERE
     [Product_Sub_Category] = 'Appliances'
-### AND [Province] = 'Ontario';
+AND [Province] = 'Ontario';
 
 ##### -- Question 4
 ##### -- Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
 ##### -- Bottom 10
-### SELECT TOP 10
+SELECT TOP 10
     [Customer_Name],
-### SUM([Sales]) AS 
+SUM([Sales]) AS 
 	TotalSales
-### FROM   KMSSQLData
-### GROUP BY   
+FROM   KMSSQLData
+GROUP BY   
 	[Customer_Name]
-### ORDER BY     
+ORDER BY     
 	TotalSales ASC;
 
 ##### -- Question 5
