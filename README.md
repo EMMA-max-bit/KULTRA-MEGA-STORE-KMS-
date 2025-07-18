@@ -237,7 +237,7 @@ ORDER BY
 ### GROUP BY
     [Order_Priority], [Ship_Mode]
 ### ORDER BY
-    [Order_Priority], [Ship_Mode];
+    [Order_Priority], [Ship_Mode]; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q11.gif)
 
 
 ## Executive Summary
