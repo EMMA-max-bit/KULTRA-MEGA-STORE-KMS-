@@ -127,42 +127,68 @@ ORDER BY
 ##### -- most valuable customers, and what products or services do they typically purchase
 ##### -- top 10 most valuable customers
 ##### -- Top 10 Valuable Customers by Total Sales
-#### SELECT TOP 10
+
+SELECT TOP 10
     [Customer_Name],
+    
     SUM(Sales) AS TotalSales,
+    
     SUM(Profit) AS TotalProfit
-#### FROM 
+    
+FROM 
 	KMSSQLData
-#### GROUP BY 
+ 
+GROUP BY 
 	[Customer_Name]
-#### ORDER BY 
+ 
+ORDER BY 
 	TotalSales DESC;
 
 ##### -- customers names, product and services.
-#### SELECT TOP 10
+
+SELECT TOP 10
     [Customer_Name],
+    
     [Product_Category],
+    
     [Product_Sub_Category],
-#### SUM([Sales]) AS  
-	TotalSales,
-#### SUM([Profit]) AS  
-	TotalProfit
-#### FROM   
+    
+SUM([Sales]) 
+AS
+TotalSales,
+ 
+SUM([Profit])
+
+AS  
+TotalProfit
+ 
+ FROM   
 	KMSSQLData
-#### WHERE
+ 
+WHERE
     	[Customer_Name] IN (
-#### SELECT TOP 10   
+     
+SELECT TOP 10   
 	[Customer_Name]
-#### FROM   
+FROM   
 	KMSSQLData
-#### GROUP BY    
+ 
+GROUP BY    
 	[Customer_Name]
-#### ORDER BY  SUM([Sales]) DESC
+ 
+ORDER BY
+
+SUM([Sales]) DESC
+
     )
-#### GROUP BY
+    
+GROUP BY
+
     [Customer_Name], [Product_Category], [Product_Sub_Category]
-#### ORDER BY
-    [Customer_Name], TotalSales DESC;
+    
+ORDER BY
+
+    [Customer_Name], TotalSales DESC; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q6.gif)
 
 ##### -- Question 7
 ##### -- small business customer that had the highest sales
