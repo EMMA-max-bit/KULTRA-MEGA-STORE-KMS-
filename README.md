@@ -212,42 +212,55 @@ ORDER BY
 ##### -- Question 10
 ##### -- customer returned items, and what segment do they belong
 ##### -- customer with low profit or loss which indicate returns
-### SELECT DISTINCT
+
+SELECT DISTINCT
     [Customer_Name],
     [Customer_Segment],
     SUM([Profit]) AS TotalProfit
-### FROM
+    
+FROM
     KMSSQLData
-### GROUP BY
+    
+GROUP BY
     [Customer_Name], [Customer_Segment]
-### HAVING SUM([Profit]) < 0
-### ORDER BY TotalProfit; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20Q10.pdf)
+    
+HAVING SUM([Profit]) < 0
+
+ORDER BY TotalProfit; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20Q10.pdf)
 
 ##### -- Question 11, Analysis of result
+
 ##### -- High/Critical Priority orders use faster methods, even if costly
 ##### -- Low Priority orders use economical shipping, saving cost
-### SELECT
+
+SELECT
     [Order_Priority],
     [Ship_Mode],
-### COUNT(*) AS TotalOrders,
-### SUM([Shipping_Cost]) AS TotalShippingCost,
-### AVG([Shipping_Cost]) AS AvgShippingCost
-### FROM
+    
+COUNT(*) AS TotalOrders,
+
+SUM([Shipping_Cost]) AS TotalShippingCost,
+
+AVG([Shipping_Cost]) AS AvgShippingCost
+
+FROM
     KMSSQLData
-### GROUP BY
+    
+GROUP BY
     [Order_Priority], [Ship_Mode]
-### ORDER BY
+    
+ORDER BY
     [Order_Priority], [Ship_Mode]; [Download here](https://github.com/EMMA-max-bit/KULTRA-MEGA-STORE-KMS-/blob/main/ANSWER%20TO%20Q11.gif)
 
 
 ## Executive Summary
-##### This report presents a comprehensive analysis of the provided KMS sales data, addressing key business questions and offering actionable insights to optimize sales strategies, improve customer profitability, and enhance operational efficiency. The analysis covers various aspects of the business, including product performance, regional sales, customer segmentation, and shipping logistics. By leveraging the insights derived from this data, KMS can make informed decisions to drive revenue growth and strengthen customer relationships.
+This report presents a comprehensive analysis of the provided KMS sales data, addressing key business questions and offering actionable insights to optimize sales strategies, improve customer profitability, and enhance operational efficiency. The analysis covers various aspects of the business, including product performance, regional sales, customer segmentation, and shipping logistics. By leveraging the insights derived from this data, KMS can make informed decisions to drive revenue growth and strengthen customer relationships.
 
 ## Introduction
-##### In today's competitive business landscape, data-driven decision-making is paramount for sustained growth and success. This capstone project aims to analyze the sales data of KMS to identify trends, patterns, and opportunities that can inform strategic business initiatives. The dataset includes detailed information on orders, products, customers, and shipping, providing a rich foundation for in-depth analysis. The primary objective is to answer specific business questions posed by KMS management, thereby providing a clear roadmap for enhancing overall business performance.
+In today's competitive business landscape, data-driven decision-making is paramount for sustained growth and success. This capstone project aims to analyze the sales data of KMS to identify trends, patterns, and opportunities that can inform strategic business initiatives. The dataset includes detailed information on orders, products, customers, and shipping, providing a rich foundation for in-depth analysis. The primary objective is to answer specific business questions posed by KMS management, thereby providing a clear roadmap for enhancing overall business performance.
 
 ## Dataset Overview
-##### The dataset used for this analysis, Kultra Mega Stores (KMS) - KMSSQLData.csv, contains a wide array of sales-related information from 2009 to 2012, Key columns include:
+The dataset used for this analysis, Kultra Mega Stores (KMS) - KMSSQLData.csv, contains a wide array of sales-related information from 2009 to 2012, Key columns include:
 ##### Row ID: Unique identifier for each record.
 ##### Order ID: Identifier for each order.
 ##### Order Date: Date when the order was placed.
@@ -272,7 +285,7 @@ ORDER BY
 ##### This dataset provides a comprehensive view of KMS's sales operations, enabling a detailed examination of various business facets.
 
 ##  Analysis and Findings
-##### This section presents the findings from the data analysis, addressing each of the business questions outlined in the project scope. The analysis was performed using the business analytical tool SQL SERVER.
+This section presents the findings from the data analysis, addressing each of the business questions outlined in the project scope. The analysis was performed using the business analytical tool SQL SERVER.
 
 # Question 1
 ## 1 Top Product Category by Sales
@@ -283,19 +296,19 @@ Below is the SQL query for the analysis [Download here]()
 
 ## 2 Regional Sales Performance
 
-##### Understanding regional sales performance helps in allocating resources effectively and tailoring marketing strategies to specific geographical areas. The analysis identified the top 3 and bottom 3 regions in terms of sales:
-##### The analyis reviews the top 3 Regions by Sales are West ($3 597 549.2755), Ontario ($3 063 212.4795) and Prarie ($2 837 304.6015)
+Understanding regional sales performance helps in allocating resources effectively and tailoring marketing strategies to specific geographical areas. The analysis identified the top 3 and bottom 3 regions in terms of sales:
+The analyis reviews the top 3 Regions by Sales are West ($3 597 549.2755), Ontario ($3 063 212.4795) and Prarie ($2 837 304.6015)
 
 ##### Bottom 3 Regions by Sales are Nunavut ($116 376.4835). Northwest Territories ($800 847.3295) and Yukon ($975 867.371)
-##### These findings highlight significant disparities in sales performance across regions. The West, Ontario, and Prarie regions are strongholds for KMS, while the Northern territories (Yukon, Northwest Territories, Nunavut) represent areas with lower sales. This suggests a need for targeted strategies to boost sales in underperforming regions, potentially through localized marketing campaigns or adjustments to product offerings.
+These findings highlight significant disparities in sales performance across regions. The West, Ontario, and Prarie regions are strongholds for KMS, while the Northern territories (Yukon, Northwest Territories, Nunavut) represent areas with lower sales. This suggests a need for targeted strategies to boost sales in underperforming regions, potentially through localized marketing campaigns or adjustments to product offerings.
 
 ## 3. Total Sales of Appliances in Ontario
 
-##### A specific inquiry was made regarding the sales performance of appliances in the province of Ontario. The finding shows that the total sales of appliances in Ontario is $202 346.84
+A specific inquiry was made regarding the sales performance of appliances in the province of Ontario. The finding shows that the total sales of appliances in Ontario is $202 346.84
 This specific data point can be used for regional sales targets and inventory planning for appliance products within Ontario.
 
 ## 4. Bottom 10 Customers by Sales and Revenue Enhancement Strategies
-##### Understanding the lowest-contributing customers is vital for developing strategies to improve their engagement and spending. The analysis identified the bottom 10 customers by sales:
+Understanding the lowest-contributing customers is vital for developing strategies to improve their engagement and spending. The analysis identified the bottom 10 customers by sales:
 
 ##### The analysis find the bottom 10 customers by sales as follows:
 #### Jeremy Farry		$85.72
@@ -317,33 +330,34 @@ This finding is significant because while Delivery Truck might be a frequently u
 
 ## 6. Most Valuable Customers and Their Product Preferences
 
-##### Identifying and understanding the most valuable customers is key to nurturing long-term relationships and maximizing lifetime value. The analysis identified the top 10 most valuable customers by sales and the products they typically purchase which are found in the pdf above.
+Identifying and understanding the most valuable customers is key to nurturing long-term relationships and maximizing lifetime value. The analysis identified the top 10 most valuable customers by sales and the products they typically purchase which are found in the pdf above.
 
 ## 7. Small Business Customer with Highest Sales
 
-##### Focusing on specific customer segments can reveal unique opportunities. The analysis identified the small business customer with the highest sales:
+Focusing on specific customer segments can reveal unique opportunities. The analysis identified the small business customer with the highest sales:
 The analysis finding shows that the small business customer with the highest sales is Dennis Kane with sales of $75 967.5905. He represents a highly successful small business client for KMS.
 
 ## 8. Corporate Customer with Most Orders (2009-2012)
 
-##### Analyzing order frequency within specific segments and timeframes provides insights into consistent engagement. The analysis identified the corporate customer who placed the most orders between 2009 and 2012:
+Analyzing order frequency within specific segments and timeframes provides insights into consistent engagement. The analysis identified the corporate customer who placed the most orders between 2009 and 2012:
 
-##### The analysis finds out that corporate customer who placed the most orders between 2009 and 2012 is Adam Hart with 18 orders.
+The analysis finds out that corporate customer who placed the most orders between 2009 and 2012 is Adam Hart with 18 orders.
 Adam Hart's consistent ordering behavior indicates a strong and reliable corporate relationship. KMS should ensure continued satisfaction for this customer and explore opportunities for expanding their business, potentially through upselling or cross-selling additional services or products relevant to corporate needs.
 
 ## 9. Most Profitable Consumer Customer
 
-##### Profitability is a key metric for evaluating customer value in any business. The analysis identified the consumer customer who was the most profitable. Emily Phan with a profit of $34 005.44 and Emily Phan represents an ideal consumer customer for KMS. Understanding her purchasing habits, product preferences, and engagement patterns can help KMS identify and target similar high-profit consumer segments.
+Profitability is a key metric for evaluating customer value in any business. The analysis identified the consumer customer who was the most profitable. Emily Phan with a profit of $34 005.44 and Emily Phan represents an ideal consumer customer for KMS. Understanding her purchasing habits, product preferences, and engagement patterns can help KMS identify and target similar high-profit consumer segments.
 
 ## 10. Customers with Low Profit or Loss (Indicating Returns)
  Identifying customers associated with low or negative profit margins can indicate issues such as frequent returns or high service costs. The analysis identified customers with low profit or loss:
 The analysis finding reviews that there are 308 customers with low or negative profit, potentially indicating returns or high service costs. Some examples include:
+
 #### Julia West (Home Office):		 -$13 057.20
 #### Laurel Workman (Home Office):	 -$12 587.05
 
 ## 11 Shipping Cost Analysis by Order Priority and Ship Mode
 
-##### An in-depth analysis of shipping costs based on order priority and shipping mode provides critical insights for logistics optimization.
+An in-depth analysis of shipping costs based on order priority and shipping mode provides critical insights for logistics optimization.
 The analysis of shipping costs by order priority and ship mode reveals the following findings [Download here]()
 
 ## Recommendations from the findings;
@@ -355,7 +369,7 @@ The analysis of shipping costs by order priority and ship mode reveals the follo
 
 ## Conclusion.
 
-#### This capstone project has provided valuable insights into KMS's sales data, addressing key business questions and offering actionable recommendations. The analysis highlighted the dominance of technology products, regional sales disparities, opportunities to re-engage low-value customers, and areas for shipping cost optimization. By implementing the suggested strategies, KMS can enhance its sales performance, improve customer relationships, and increase profitability.
+This capstone project has provided valuable insights into KMS's sales data, addressing key business questions and offering actionable recommendations. The analysis highlighted the dominance of technology products, regional sales disparities, opportunities to re-engage low-value customers, and areas for shipping cost optimization. By implementing the suggested strategies, KMS can enhance its sales performance, improve customer relationships, and increase profitability.
 
 
 
